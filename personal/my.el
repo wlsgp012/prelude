@@ -2,13 +2,13 @@
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; font size
-(set-face-attribute 'default nil :height 240)
+(set-face-attribute 'default nil :height 180)
 
 ;; swap meta and super
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 
-;; install some packages 
+;; install some packages
 (prelude-require-packages '(rainbow-delimiters color-theme-sanityinc-tomorrow))
 
 ;; clojure
