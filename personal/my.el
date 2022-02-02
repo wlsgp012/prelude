@@ -13,3 +13,6 @@
 
 ;; clojure
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+
+;; projectile
+(setq projectile-indexing-method 'hybrid)
