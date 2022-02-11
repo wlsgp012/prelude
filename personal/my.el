@@ -9,7 +9,7 @@
 (setq mac-option-modifier 'super)
 
 ;; install some packages
-(prelude-require-packages '(rainbow-delimiters color-theme-sanityinc-tomorrow))
+(prelude-require-packages '(rainbow-delimiters color-theme-sanityinc-tomorrow clj-refactor))
 
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
@@ -29,3 +29,11 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "sienna1"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "pink"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "red")))))
+
+;; clojure
+(defun my-clojure-mode-hook ()
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1) ; for adding require/use/import statements
+  ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+  (cljr-add-keybindings-with-prefix "C-c C-n"))
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
