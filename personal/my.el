@@ -2,7 +2,7 @@
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; font size
-(set-face-attribute 'default nil :height 180)
+;; (set-face-attribute 'default nil :height 240)
 
 ;; swap meta and super
 (setq mac-command-modifier 'meta)
