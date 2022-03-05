@@ -2,7 +2,7 @@
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; font size
-;; (set-face-attribute 'default nil :height 240)
+(set-face-attribute 'default nil :height 240)
 
 ;; swap meta and super
 (setq mac-command-modifier 'meta)
@@ -41,4 +41,3 @@
 ;; drag stuff
 (drag-stuff-global-mode 1)
 (drag-stuff-define-keys)
-
