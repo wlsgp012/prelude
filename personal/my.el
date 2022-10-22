@@ -9,7 +9,11 @@
 (setq mac-option-modifier 'super)
 
 ;; install some packages
-(prelude-require-packages '(rainbow-delimiters color-theme-sanityinc-tomorrow clj-refactor drag-stuff))
+(prelude-require-packages '(rainbow-delimiters
+                            color-theme-sanityinc-tomorrow
+                            clj-refactor
+                            drag-stuff
+                            geiser-mit))
 
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
