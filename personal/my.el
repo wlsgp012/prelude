@@ -13,7 +13,7 @@
                             color-theme-sanityinc-tomorrow
                             clj-refactor
                             drag-stuff
-                            geiser-mit))
+                            geiser-guile))
 
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
