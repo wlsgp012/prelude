@@ -13,6 +13,7 @@
                             color-theme-sanityinc-tomorrow
                             clj-refactor
                             drag-stuff
+                            iedit
                             geiser-guile))
 
 ;; projectile
@@ -45,3 +46,6 @@
 ;; drag stuff
 (drag-stuff-global-mode 1)
 (drag-stuff-define-keys)
+
+;; iedit global
+(ignore-errors (iedit-mode 1))
