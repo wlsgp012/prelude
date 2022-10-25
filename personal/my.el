@@ -48,4 +48,4 @@
 (drag-stuff-define-keys)
 
 ;; iedit global
-(require 'ieditgg)
+(require 'iedit)
