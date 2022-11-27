@@ -2,7 +2,8 @@
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; font size
-(set-face-attribute 'default nil :height 240)
+;;(set-face-attribute 'default nil :height 240)
+(set-face-attribute 'default nil :height 140)
 
 ;; swap meta and super
 (setq mac-command-modifier 'meta)
@@ -14,6 +15,7 @@
                             clj-refactor
                             drag-stuff
                             iedit
+                            py-yapf
                             geiser-guile))
 
 ;; projectile
@@ -49,3 +51,6 @@
 
 ;; iedit global
 (require 'iedit)
+
+;; python
+(add-hook 'python-mode-hook 'py-yapf-enable-on-save)
