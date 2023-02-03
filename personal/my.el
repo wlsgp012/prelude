@@ -17,7 +17,7 @@
                             iedit
                             py-yapf
                             geiser-guile))
-
+n
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
 
@@ -54,3 +54,8 @@
 
 ;; python
 (add-hook 'python-mode-hook 'py-yapf-enable-on-save)
+
+;; elixir
+;; Create a buffer-local hook to run elixir-format on save, only when we enable elixir-mode.
+(add-hook 'elixir-mode-hook
+          (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
