@@ -17,7 +17,7 @@
                             iedit
                             py-yapf
                             geiser-guile))
-n
+
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
 
