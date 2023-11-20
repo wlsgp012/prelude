@@ -6,8 +6,9 @@
 (set-face-attribute 'default nil :height 140)
 
 ;; swap meta and super
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'super)
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'super))
 
 ;; install some packages
 (prelude-require-packages '(rainbow-delimiters
