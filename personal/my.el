@@ -17,10 +17,16 @@
                             drag-stuff
                             iedit
                             py-yapf
+                            treemacs-projectile
                             geiser-guile))
 
 ;; projectile
 (setq projectile-indexing-method 'hybrid)
+
+;; treemacs
+(add-hook 'emacs-startup-hook 'treemacs)
+(global-set-key (kbd "C-x t t") 'treemacs)
+(global-set-key (kbd "M-0") 'treemacs-select-window)
 
 ;; rainbow-delimiters
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
