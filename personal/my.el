@@ -24,7 +24,7 @@
 (setq projectile-indexing-method 'hybrid)
 
 ;; treemacs
-(add-hook 'emacs-startup-hook 'treemacs)
+;; (add-hook 'emacs-startup-hook 'treemacs)
 (global-set-key (kbd "C-x t t") 'treemacs)
 (global-set-key (kbd "M-0") 'treemacs-select-window)
 
@@ -51,6 +51,10 @@
   ;; This choice of keybinding leaves cider-macroexpand-1 unbound
   (cljr-add-keybindings-with-prefix "C-c C-n"))
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+;; formatting after save
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'cider-format-buffer nil 'local)))
 
 ;; drag stuff
 (drag-stuff-global-mode 1)
