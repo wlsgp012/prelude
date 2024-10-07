@@ -17,6 +17,7 @@
                             drag-stuff
                             iedit
                             py-yapf
+                            lsp-haskell
                             treemacs-projectile
                             geiser-guile))
 
@@ -70,3 +71,7 @@
 ;; Create a buffer-local hook to run elixir-format on save, only when we enable elixir-mode.
 (add-hook 'elixir-mode-hook
           (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
+
+;; haskell
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
